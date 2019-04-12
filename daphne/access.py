@@ -22,7 +22,7 @@ class AccessLogGenerator(object):
                 request="%(method)s %(path)s" % details,
                 status=details['status'],
                 length=details['size'],
-            )
+            ) if 'ELB-HealthChecker' not in str(details['headers']) else True
         # Websocket requests
         elif protocol == "websocket" and action == "connecting":
             self.write_entry(

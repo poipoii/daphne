@@ -272,6 +272,7 @@ class WebRequest(http.Request):
                     "client": "%s:%s" % tuple(self.client_addr) if self.client_addr else None,
                     "time_taken": self.duration(),
                     "size": self.sentLength,
+                    "headers": self.requestHeaders,
                 })
             except Exception as e:
                 logging.error(traceback.format_exc())
