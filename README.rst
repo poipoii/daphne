@@ -1,8 +1,8 @@
 daphne
 ======
 
-.. image:: https://api.travis-ci.org/django/daphne.svg
-    :target: https://travis-ci.org/django/daphne
+.. image:: https://travis-ci.com/poipoii/daphne.svg?branch=1.4.3
+    :target: https://travis-ci.com/poipoii/daphne
 
 .. image:: https://img.shields.io/pypi/v/daphne.svg
     :target: https://pypi.python.org/pypi/daphne

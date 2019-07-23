@@ -66,7 +66,6 @@ class TestHandshake(testcases.ASGIWebSocketTestCase):
         params=http_strategies.query_params(),
         headers=http_strategies.headers(),
     )
-    @settings(perform_health_check=False)
     def test_connection(self, path, params, headers):
         message = WebSocketConnection().connect(path, params, headers)
         self.assert_valid_websocket_connect_message(message, path, params, headers)
